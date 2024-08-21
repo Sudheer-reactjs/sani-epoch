@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: 'Helvetica Neue', sans-serif; 
+}
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.white-background {
+  background-color: white;
+}
+
+.black-background {
+  background-color: black;
+  color: white; /* Optional: Ensure text is readable on a black background */
+}
+nav a {
+  color: #757575;
+}
+.button-black {
+  position: relative;
+  border: 2px solid transparent;
+  background: #000000;
+  background-clip: padding-box;
+  border-radius: 90px;
+  padding: 14px 23px;
+  font-size: 20px;
+  display: flex;
+  width: max-content;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+}
+ .button-black::before{
+  content: '';
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(to bottom right, #19B0B1, #0951A6);
+  z-index: -1;
+  border-radius: 90px;
+}
+.before-image-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(226, 232, 240, 0.65); 
+  border-radius: 32px; 
+  pointer-events: none; 
+  z-index: 1; 
+  box-sizing: border-box; 
+}
+.black-background .header-bg {
+  background: rgb(0 0 0 / 15%);
+}
+.header-bg{
+  backdrop-filter: saturate(100%) blur(10px); 
+  background: rgb(0 0 0 / 15%);
+}
+h2 {
+  font-size: 38px;
+  line-height: 48px;
+  letter-spacing: -1px;
+  font-weight: 500; 
+}
+.backdrop{
+  backdrop-filter: saturate(100%) blur(10px);
+}
+@media (max-width:767px) {
+  .button-black {
+    padding: 12px 23px;
+    font-size: 16px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -1px;
+  font-weight: 500;
+}
+}
