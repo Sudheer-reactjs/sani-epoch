@@ -1,27 +1,28 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { Logo } from "@/utlis/svg";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = () => {  
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className="flex items-center justify-between py-[15px] fixed z-10 top-0 w-full"> 
+    <header className="flex items-center justify-between py-[14px] fixed z-10 top-0 w-full"> 
       <div className="container">
-        <div className="header-bg relative z-1 flex items-center justify-between border-[1px] p-[6px] border-[#191919] rounded-[6px]">
+        <div className="header-bg relative z-1 flex items-center justify-between border-[1px] py-[5px] px-[8px] border-[#191919] rounded-[6px]">
           {/* Logo */} 
-          <div className="flex items-center lg:min-w-[202px]">
-            <Link href="/" className="text-xl font-bold">
-              Logo
+          <div className="flex items-center lg:min-w-[220px]">
+            <Link href="/" className="text-xl font-bold"> 
+              <Logo />
             </Link>
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-8">
             <Link href="/about-us">About Us</Link>
             <Link href="/strategy-builder">Strategy Builder</Link>
             <Link href="/pricing">Pricing</Link>
@@ -30,23 +31,23 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Login Button */}
-          <div className="hidden md:flex">
+          <div className="hidden lg:flex">
             <Link
               href="/login"
-              className="bg-[#191919] text-[#fff] py-[7px] px-[18px] rounded-[10px] md:mr-[10px] "
+              className="font-HelveticaNeueMedium bg-[#191919] text-[#fff] py-[7px] px-[17px] rounded-[10px] md:mr-[15px] "
             >
               Login
             </Link>
             <Link
               href="/get-started"
-              className="bg-[#fff] text-[#000] py-[7px] px-[18px] rounded-[10px] "
+              className="font-HelveticaNeueMedium bg-[#fff] text-[#000] py-[7px] px-[17px] rounded-[10px] "
             >
               Get Started
             </Link>
           </div>
 
           {/* Hamburger Menu */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button onClick={toggleMenu} className="focus:outline-none">
               <svg
                 className="w-6 h-6"
@@ -71,7 +72,7 @@ const Header: React.FC = () => {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden absolute top-16 left-0 w-full bg-gray-800">
+            <div className="lg:hidden absolute top-16 left-0 w-full bg-gray-800">
               <nav className="flex flex-col items-center space-y-4 py-4">
                 <Link href="/about-us" onClick={toggleMenu}>
                   About Us
@@ -91,14 +92,14 @@ const Header: React.FC = () => {
                 <Link
                   href="/login"
                   onClick={toggleMenu}
-                  className="bg-[#191919] py-[7px] px-[18px] rounded-[10px] md:mr-[10px]"
+                  className="font-HelveticaNeueMedium bg-[#191919] py-[7px] px-[18px] rounded-[10px] md:mr-[10px]"
                 >
                   Login
                 </Link>
                 <Link
                   href="/get-started"
                   onClick={toggleMenu}
-                  className="bg-[#fff] text-[#000] py-[7px] px-[18px] rounded-[10px] "
+                  className="font-HelveticaNeueMedium bg-[#fff] text-[#000] py-[7px] px-[18px] rounded-[10px] "
                 >
                   Get Started
                 </Link>

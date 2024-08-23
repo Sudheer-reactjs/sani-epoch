@@ -13,6 +13,11 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        HelveticaNeueThin: ['var(--font-HelveticaNeueThin)'],  
+        HelveticaNeue: ['var(--font-HelveticaNeue)'], 
+        HelveticaNeueMedium: ['var(--font-HelveticaNeueMedium)'],
+      },
     },
   },
   plugins: [],

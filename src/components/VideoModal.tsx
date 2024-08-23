@@ -1,3 +1,4 @@
+import { CrossBlack } from '@/utlis/svg';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -14,9 +15,9 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
       <div className="relative bg-white p-[15px] rounded-lg  mx-auto w-[94%] max-w-[1200px]  h-[60vh] md:h-[80vh] md:p-[30px]">
         <button
           onClick={onClose}
-          className="absolute top-0 right-0 rounded-[50%] text-[20px] bg-black h-[30px] z-10 w-[30px] text-[#fff]"
+          className="absolute top-0 right-0 rounded-[50%] bg-black h-[30px] z-10 w-[30px] flex justify-center items-center"
         >
-          &times;
+          <CrossBlack />
         </button>
         <video
           controls

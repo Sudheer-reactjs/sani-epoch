@@ -4,6 +4,7 @@ import Link from "next/link";
 import { title } from "process";
 import React from "react";
 import { StaticImageData } from "next/image";
+import { ButtonArrow } from "@/utlis/svg";
 
 interface SectionProps {
   imageSrc: StaticImageData | string;
@@ -48,7 +49,7 @@ const TextWithImage: React.FC<SectionProps> = ({
         style={{ flex: 1 }}
         className="flex-col flex gap-[12px] text-center md:text-left md:max-w-[342px] md:gap-[20px]"
       >
-        <h6 className="text-[#757575] md:text-[20px]">{smallHeading}</h6>
+        <h6 className="font-HelveticaNeu text-[#757575] md:text-[20px]">{smallHeading}</h6>
         <h2 className=" text-[36px] leading-[36px] md:text-[38px] md:leading-[48px] max-w-[300px] mx-auto md:max-w-[100%]">
           {title}
         </h2>
@@ -68,7 +69,7 @@ const TextWithImage: React.FC<SectionProps> = ({
         <div className="flex mt-[15px] justify-center md:justify-start">
           <Link className="button-black " href={buttonLink}>
             {buttonText}
-            <span className="w-[24px] h-[24px] bg-[#fff] inline-block"></span>
+            <ButtonArrow />
           </Link>
         </div>
       </div>
