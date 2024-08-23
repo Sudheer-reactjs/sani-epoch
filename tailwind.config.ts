@@ -17,6 +17,7 @@ const config: Config = {
         HelveticaNeueThin: ['var(--font-HelveticaNeueThin)'],  
         HelveticaNeue: ['var(--font-HelveticaNeue)'], 
         HelveticaNeueMedium: ['var(--font-HelveticaNeueMedium)'],
+        PublicSansBlack: ['var(--font-PublicSansBlack)'],
       },
     },
   },

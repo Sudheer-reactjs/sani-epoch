@@ -101,7 +101,6 @@ h2 {
   font-size: 38px;
   line-height: 48px;
   letter-spacing: -1px;
-  font-weight: 500; 
 }
 .backdrop{
   backdrop-filter: saturate(100%) blur(10px);
@@ -123,29 +122,12 @@ h2 {
 .home-bg{
   background-image: url(../assets/images/Homepage-bg.png);
 }
-@media (max-width:767px) {
-  .button-black {
-    padding: 12px 23px;
-    font-size: 16px;
-}
-h2 {
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: -1px;
-  font-weight: 500;
-}
-}
-
-
-
-
-
-
 
 :root {
   --size: clamp(10rem, 1rem + 40vmin, 30rem);
   --gap: calc(var(--size) / 14);
   --duration: 60s;
+  --textduration: 150s;
   --scroll-start: 0;
   --scroll-end: calc(-100% - var(--gap));
 }
@@ -171,7 +153,9 @@ h2 {
   min-width: 100%;
   animation: scroll-x var(--duration) linear infinite;
 }
-
+.marquee__group__text{
+  animation: scroll-x var(--textduration) linear infinite;  
+}
 @media (prefers-reduced-motion: reduce) {
   .marquee__group {
     animation-play-state: paused;
@@ -213,4 +197,22 @@ h2 {
     transform: translateY(var(--scroll-end));
   }
 }
+
+@media (max-width:767px) {
+  .button-black {
+    padding: 12px 23px;
+    font-size: 16px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -1px;
+}
+}
+
+
+
+
+
+
 

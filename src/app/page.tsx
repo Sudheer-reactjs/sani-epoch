@@ -23,6 +23,7 @@ import {
 } from "@/utlis/svg";
 import ServiceGrid from "@/components/ServiceGrid";
 import LogoSlider from "@/components/LogoSlider";
+import TextScroll from "@/components/TextScroll";
 
 export default function Home() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -176,13 +177,16 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full inline-block text-center pt-[170px]"> 
+        <section className="w-full inline-block text-center pb-[60px] pt-[170px]">    
           <div className="container">
             <h6 className="uppercase text-[16px] tracktext-center font-HelveticaNeue text-white text-base tracking-widest mb-[45px]">
               Powering 20k+ businesses globally
-            </h6>
+            </h6> 
           </div>
           <LogoSlider />
+        </section>
+        <section className="w-full inline-block text-center">   
+           <TextScroll />
         </section>
       </main>
     </>

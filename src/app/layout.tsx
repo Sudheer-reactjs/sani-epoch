@@ -19,6 +19,11 @@ const HelveticaNeueMedium = localFont({
   display: 'swap',
   variable: '--font-HelveticaNeueMedium',
 }); 
+const PublicSansBlack = localFont({
+  src: '../assets/fonts/PublicSans-Black.ttf',
+  display: 'swap',
+  variable: '--font-PublicSansBlack',
+}); 
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className=''>
-      <body id='black-background' className={`${HelveticaNeueThin.variable} ${HelveticaNeue.variable} ${HelveticaNeueMedium.variable}`}>  
+      <body id='black-background' className={`${HelveticaNeueThin.variable} ${HelveticaNeue.variable} ${HelveticaNeueMedium.variable} ${PublicSansBlack.variable}`}>  
         <ClientRootLayout>
           {children}
         </ClientRootLayout>     
