@@ -48,7 +48,7 @@ export default function Home() {
         className="pt-[82px] home-bg bg-cover bg-top relative z-[1]"
         style={{ paddingTop: "82px" }}
       >
-        <section className="w-full inline-block text-center pt-[40px] pb-[30px] md:pt-[110px] md:pb-[100px]">
+        <section className="w-full inline-block text-center pt-[40px] pb-[30px] md:pt-[110px] md:pb-[65px]">
           <div className="container">
             <h5 className="font-HelveticaNeue text-[#757575] text-[16px] md:text-[20px] ">
               Elevate your <b className="font-HelveticaNeueMedium">trading</b>{" "}
@@ -72,7 +72,7 @@ export default function Home() {
               <Image
                 src={VideoImage}
                 alt="VideoImage"
-                className="rounded-[28px] hidden md:block"
+                className="rounded-[28px] hidden md:block "
               />
               <Image src={MobileVideimage} alt="VideoImage" className="max-w-[400px] w-full mx-auto md:hidden " />
               <div className="absolute inset-0 flex items-center justify-center"> 
