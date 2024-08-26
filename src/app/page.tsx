@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import TextWithImage from "@/components/TextWithImage";
-import VideoImage from "@/assets/images/video-image.png";
+import VideoImage from "@/assets/images/video-image-new.png";
 import CommunityImage from "@/assets/images/community.jpg";
 import ExploreImage from "@/assets/images/explore.jpg";
 import AskGrid from "@/assets/images/ask.jpg";
