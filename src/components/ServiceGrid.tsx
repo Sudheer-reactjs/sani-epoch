@@ -9,7 +9,7 @@ interface SectionProps {
 
 const ServiceGrid: React.FC<SectionProps> = ({ Icon, Title, PlusIcon }) => {
   return (
-    <div className='backdrop flex flex-col justify-between bg-[rgba(0,0,0,0.65)] border-solid border-[2px] border-[#191919] rounded-[32px] p-[35px] min-h-[310px] md:min-h-[350px]'>
+    <div className='backdrop flex flex-col justify-between bg-[rgba(0,0,0,0.65)] border-solid border-[2px] border-[#191919] rounded-[32px] p-[35px] min-h-[280px] md:min-h-[350px]'>
       <div className='flex justify-between items-center gap-[10px] pb-[60px]'> 
         <div>
           {typeof Icon === 'string' ? (

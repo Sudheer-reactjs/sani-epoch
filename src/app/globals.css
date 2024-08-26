@@ -49,7 +49,6 @@ body#black-background::after {
   pointer-events: none; 
 }
 nav a {
-  color: #757575;
   font-family: var(--font-HelveticaNeueMedium);
 }
 .button-black {
@@ -156,6 +155,46 @@ h2 {
 .marquee__group__text{
   animation: scroll-x var(--textduration) linear infinite;  
 }
+.custom-p-0 a{
+padding: 0;
+}
+#black-background .footer-top {
+  border-radius: 32px;
+  border: 2px solid var(--grad-1, #19B0B1);
+  background: rgba(0, 0, 0, 0.00);
+  box-shadow: 0px -40px 50px 0px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12.5px); 
+}
+#black-background  .footer-middle a {
+  color: #757575;
+}
+#black-background  .news-form p { 
+  opacity: 0.45;
+}
+#black-background  .custom-p-0 g circle {
+  fill: transparent;
+  stroke: rgb(255 255 255 / 15%);
+}
+#black-background  .custom-p-0 path {
+  fill: #fff;
+}
+#black-background .input-border, #black-background .input-border  .MuiOutlinedInput-notchedOutline {
+  border-color: rgb(255 255 255 / 25%) !important;
+  color: #fff;
+}
+#black-background .submitbutton path {
+  fill: #fff;
+}
+#black-background  .footer-bottom {
+  border-top-color: rgb(255 255 255 / 15%) !important;
+}
+#black-background .footer-bottom p, #black-background .footer-bottom li a {
+  color: rgb(255 255 255);
+}
+.menu-open {
+  overflow: hidden;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee__group {
     animation-play-state: paused;
@@ -179,6 +218,12 @@ h2 {
   animation-direction: reverse;
   animation-delay: -3s;
 }
+.mobile-menu{
+  background-image: url(../assets/images/menu-mobile.jpg); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 @keyframes scroll-x {
   from {
@@ -197,8 +242,23 @@ h2 {
     transform: translateY(var(--scroll-end));
   }
 }
-
+@media (min-width:1024px) {
+nav a {
+  color: #757575;
+  font-family: var(--font-HelveticaNeueMedium);
+}
+}
+@media (min-width:768px) {
+#black-background .footer-main {
+  background-image: url(../assets/images/footer-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+}
 @media (max-width:767px) {
+  .home-bg{
+    background-image: url(../assets/images/homepage-mobile.png); 
+  }
   .button-black {
     padding: 12px 23px;
     font-size: 16px;
@@ -207,6 +267,9 @@ h2 {
   font-size: 24px;
   line-height: 32px;
   letter-spacing: -1px;
+}
+.br-hide br{
+  display: none;;
 }
 }
 

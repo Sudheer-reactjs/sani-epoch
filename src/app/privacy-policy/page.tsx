@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 export default function page() {
   return (
-    <div>
+    <>
       <main className="pt-[82px] bg-[#F7F7F7] bg-top relative z-[1] pb-[180px]">
-       <h1>strategy-builder</h1>
-       </main>
-    </div>
-  )
+        <h1>Privacy Policy</h1>
+      </main>
+    </>
+  );
 }

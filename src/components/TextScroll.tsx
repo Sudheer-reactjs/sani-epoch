@@ -28,13 +28,13 @@ const TextScroll = () => {
     <article className="wrapper flex flex-col mx-auto max-w-[100vw] gap-[25px]">
       <div className="marquee">
         <div className="marquee__group marquee__group__text  ">
-          <div className="opacity-5 text-white font-PublicSansBlack text-[16vw] uppercase tracking-[40px]">
+        <div className="opacity-5 text-white font-PublicSansBlack uppercase tracking-[7px] text-[140px] leading-[130px] md:text-[250px] md:leading-[220px] md:tracking-[40px] lg:text-[400px] lg:leading-[380px]"> 
             Epoch fin Epoch fin Epoch fin Epoch fin Epoch fin Epoch fin Epoch  fin
           </div>
         </div>
-
+ 
         <div aria-hidden="true" className="marquee__group">
-          <div className="opacity-5 text-white font-PublicSansBlack  text-[16vw] uppercase tracking-[40px]">
+          <div className="opacity-5 text-white font-PublicSansBlack uppercase tracking-[7px] text-[140px] leading-[130px] md:text-[250px] md:leading-[220px] md:tracking-[40px] lg:text-[400px] lg:leading-[380px]"> 
             Epoch fin Epoch fin Epoch fin Epoch fin Epoch fin Epoch fin Epoch  fin
           </div>
         </div>

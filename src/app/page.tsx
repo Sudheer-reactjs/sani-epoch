@@ -7,6 +7,7 @@ import VideoImage from "@/assets/images/video-image.png";
 import CommunityImage from "@/assets/images/community.jpg";
 import ExploreImage from "@/assets/images/explore.jpg";
 import AskGrid from "@/assets/images/ask.jpg";
+import MobileVideimage from "@/assets/images/mobile-banner.png"
 
 import VideoModal from "@/components/VideoModal";
 import {
@@ -67,17 +68,18 @@ export default function Home() {
 
         <section className="w-full inline-block">
           <div className="container">
-            <div className="relative cursor-pointer" onClick={openModal}>
+            <div className="relative cursor-pointer text-center" onClick={openModal}>
               <Image
                 src={VideoImage}
                 alt="VideoImage"
-                className="rounded-[28px]"
+                className="rounded-[28px] hidden md:block"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
+              <Image src={MobileVideimage} alt="VideoImage" className="max-w-[400px] w-full mx-auto md:hidden " />
+              <div className="absolute inset-0 flex items-center justify-center"> 
                 <YoutubeIcon />
               </div>
             </div>
-            <div className="max-w-[290px] ml-auto mr-auto text-center relative mt-[-105px] md:max-w-[710px]">
+            <div className="br-hide max-w-[300px] ml-auto mr-auto text-center relative mt-[-105px] md:max-w-[710px]">
               <h2>
                 Access elite trading strategies <br></br> without any coding
                 experience required.
@@ -177,9 +179,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full inline-block text-center pb-[60px] pt-[170px]">    
+        <section className="w-full inline-block text-center pb-[40px] pt-[64px] md:pt-[170px] md:pb-[60px]">    
           <div className="container">
-            <h6 className="uppercase text-[16px] tracktext-center font-HelveticaNeue text-white text-base tracking-widest mb-[45px]">
+            <h6 className="uppercase text-[16px] tracktext-center font-HelveticaNeue text-white text-base tracking-widest mb-[30px] md:mb-[45px]">
               Powering 20k+ businesses globally
             </h6> 
           </div>

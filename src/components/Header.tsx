@@ -1,19 +1,32 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Logo } from "@/utlis/svg";
+import { HumburgerCloseIcon, HumburgerIcon, Logo } from "@/utlis/svg";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {  
+  const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+
+    // Cleanup function to remove the class when the component is unmounted
+    return () => {
+      document.body.classList.remove('menu-open');
+    };
+  }, [isMenuOpen]);
+
   return (
-    <header className="flex items-center justify-between py-[14px] fixed z-10 top-0 w-full"> 
+    <header className="footer-main flex items-center justify-between py-[14px] fixed z-10 top-0 w-full"> 
       <div className="container">
-        <div className="header-bg relative z-1 flex items-center justify-between border-[1px] py-[5px] px-[8px] border-[#191919] rounded-[6px]">
+        <div className="header-bg relative z-[9] flex items-center justify-between border-[1px] py-[10px] px-[18px] border-[#191919] rounded-[6px] lg:py-[5px] lg:px-[8px]">
           {/* Logo */} 
           <div className="flex items-center lg:min-w-[220px]">
             <Link href="/" className="text-xl font-bold"> 
@@ -48,32 +61,16 @@ const Header: React.FC = () => {
 
           {/* Hamburger Menu */}
           <div className="lg:hidden flex items-center">
-            <button onClick={toggleMenu} className="focus:outline-none">
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d={
-                    isMenuOpen
-                      ? "M6 18L18 6M6 6l12 12"
-                      : "M4 6h16M4 12h16m-7 6h7"
-                  }
-                />
-              </svg>
-            </button>
+          <button onClick={toggleMenu} className="focus:outline-none">
+             {isMenuOpen ? <HumburgerCloseIcon /> : <HumburgerIcon />} 
+          </button>
           </div>
-
-          {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className="lg:hidden absolute top-16 left-0 w-full bg-gray-800">
-              <nav className="flex flex-col items-center space-y-4 py-4">
+        </div>
+      </div>
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+            <div className="mobile-menu fixed left-0 top-0 w-full min-h-[100vh] h-[100vh] p-[30px] bg-black z-[8] overflow-scroll lg:hidden">
+              <nav className="flex flex-col items-center space-y-4 py-[130px] text-[#fff] text-[24px]">
                 <Link href="/about-us" onClick={toggleMenu}>
                   About Us
                 </Link>
@@ -86,28 +83,28 @@ const Header: React.FC = () => {
                 <Link href="/community" onClick={toggleMenu}>
                   Community
                 </Link>
-                <Link href="/Blog" onClick={toggleMenu}>
+                <Link href="/blog" onClick={toggleMenu}>
                   Blog
                 </Link>
-                <Link
+              </nav>
+              <div className="flex flex-col max-w-[235px] w-full mx-auto text-center gap-[15px]">
+              <Link
                   href="/login"
                   onClick={toggleMenu}
-                  className="font-HelveticaNeueMedium bg-[#191919] py-[7px] px-[18px] rounded-[10px] md:mr-[10px]"
+                  className="font-HelveticaNeueMedium bg-[#191919] py-[12px] px-[18px] rounded-[10px] md:mr-[10px]"
                 >
                   Login
                 </Link>
                 <Link
                   href="/get-started"
                   onClick={toggleMenu}
-                  className="font-HelveticaNeueMedium bg-[#fff] text-[#000] py-[7px] px-[18px] rounded-[10px] "
+                  className="font-HelveticaNeueMedium bg-[#fff] text-[#000] py-[12px] px-[18px] rounded-[10px] "
                 >
                   Get Started
                 </Link>
-              </nav>
+              </div>
             </div>
           )}
-        </div>
-      </div>
     </header>
   );
 };
