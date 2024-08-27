@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { HumburgerCloseIcon, HumburgerIcon, Logo } from "@/utlis/svg";
+import { HumburgerCloseIcon, HumburgerIcon, LogoBlack, LogoWhite } from "@/utlis/svg";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +30,8 @@ const Header: React.FC = () => {
           {/* Logo */} 
           <div className="flex items-center lg:min-w-[220px]">
             <Link href="/" className="text-xl font-bold"> 
-              <Logo />
+              <div className="logo-white"><LogoWhite /></div>
+              <div className="logo-black"><LogoBlack /></div>
             </Link>
           </div>
 
@@ -40,7 +41,7 @@ const Header: React.FC = () => {
             <Link href="/strategy-builder">Strategy Builder</Link>
             <Link href="/pricing">Pricing</Link>
             <Link href="/community">Community</Link>
-            <Link href="/Blog">Blog</Link>
+            <Link href="/blog">Blog</Link>
           </nav>
 
           {/* Login Button */}
@@ -53,7 +54,7 @@ const Header: React.FC = () => {
             </Link>
             <Link
               href="/get-started"
-              className="font-HelveticaNeueMedium bg-[#fff] text-[#000] py-[7px] px-[17px] rounded-[10px] "
+              className="get-started font-HelveticaNeueMedium bg-[#fff] text-[#000] py-[7px] px-[17px] rounded-[10px] "
             >
               Get Started
             </Link>
@@ -61,7 +62,7 @@ const Header: React.FC = () => {
 
           {/* Hamburger Menu */}
           <div className="lg:hidden flex items-center">
-          <button onClick={toggleMenu} className="focus:outline-none">
+          <button onClick={toggleMenu} className="menuicon focus:outline-none">
              {isMenuOpen ? <HumburgerCloseIcon /> : <HumburgerIcon />} 
           </button>
           </div>

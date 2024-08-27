@@ -1,10 +1,11 @@
-'use client'; 
+"use client";
 import { useBodyId } from "@/utlis/useBodyClass";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-export default function ClientRootLayout({ 
+
+export default function ClientRootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -14,16 +15,16 @@ export default function ClientRootLayout({
   useEffect(() => {
     document.body.id = bodyId;
     return () => {
-      document.body.id = '';
+      document.body.id = "";
     };
   }, [bodyId]);
 
   return (
     <>
       <Header />
-        {children}
+      {children}
       <Footer />
-      <div className='noise-effect hide'></div> 
+      <div className="noise-effect hide"></div>
     </>
   );
 }

@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <>
       <main
-        className="pt-[82px] home-bg bg-cover bg-top relative z-[1]"
+        className="pt-[82px] home-bg bg-black bg-cover bg-top relative z-[1]"
         style={{ paddingTop: "82px" }}
       >
         <section className="w-full inline-block text-center pt-[40px] pb-[30px] md:pt-[110px] md:pb-[65px]">

@@ -3,13 +3,14 @@ import Link from "next/link";
 import { ButtonArrow } from "@/utlis/svg";
 import NewsletterForm from "./NewsletterForm";
 
+
 export default function Footer() {
   return (
     <>
       <footer className="footer-main">
         <div className="container">
           <div className="footer-top footer-text bg-[#000] relative rounded-[32px] z-[1]  flex gap-[20px] justify-between items-center flex-col p-[35px] md:py-[85px] md:px-[50px] mt-[-40px] md:mt-[-80px] lg:py-[85px] lg:px-[122px] md:flex-row lg:mt-[-180px] ">
-            <h2 className="text-[#fff] font-HelveticaNeue max-w-[596px] text-center md:text-left !text-[20px] !md:text-[38px]">  
+            <h2 className="text-[#fff] font-HelveticaNeue max-w-[596px] text-center md:text-left !text-[20px] md:!text-[38px]">  
               Build trading algorithms with AI, backtest them, then execute —
               all in one platform. No coding skills required.
             </h2>
@@ -54,6 +55,7 @@ export default function Footer() {
           </div>
         </div>
       </footer>
+     
     </>
   );
 }

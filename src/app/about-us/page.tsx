@@ -4,7 +4,7 @@ export default function page() {
   return (
     <>
       <main className="pt-[82px] bg-[#F7F7F7] bg-top relative z-[1] pb-[180px]">
-        <h1>About us</h1>
+        <h1 className="text-center p-20">About us</h1>
       </main>
     </>
   );

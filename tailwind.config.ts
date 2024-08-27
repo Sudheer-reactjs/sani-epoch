@@ -19,6 +19,11 @@ const config: Config = {
         HelveticaNeueMedium: ['var(--font-HelveticaNeueMedium)'],
         PublicSansBlack: ['var(--font-PublicSansBlack)'],
       },
+      colors: {
+        'custom-gray': 'rgba(117, 117, 117, 0.05)', 
+        'custom-black': 'rgba(0, 0, 0, 0.65)', 
+      },
+
     },
   },
   plugins: [],
