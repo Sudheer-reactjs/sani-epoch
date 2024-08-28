@@ -92,14 +92,14 @@ const Header: React.FC = () => {
               <Link
                   href="/login"
                   onClick={toggleMenu}
-                  className="font-HelveticaNeueMedium bg-[#191919] py-[12px] px-[18px] rounded-[10px] md:mr-[10px]"
+                  className="font-HelveticaNeueMedium bg-[#191919] text-white py-[12px] px-[18px] rounded-[10px] md:mr-[10px]"
                 >
                   Login
                 </Link>
                 <Link
                   href="/get-started"
                   onClick={toggleMenu}
-                  className="font-HelveticaNeueMedium bg-[#fff] text-[#000] py-[12px] px-[18px] rounded-[10px] "
+                  className="bg-menu-button font-HelveticaNeueMedium bg-[#fff] text-[#000] py-[12px] px-[18px] rounded-[10px] "
                 >
                   Get Started
                 </Link>

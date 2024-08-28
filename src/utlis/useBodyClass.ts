@@ -1,9 +1,11 @@
 // utils/useBodyId.ts
-import { usePathname } from "next/navigation";
+import { usePathname } from "next/navigation"; // Directly import usePathname
 
+// Function to return a specific body ID based on the pathname
 export function useBodyId() {
   const pathname = usePathname();
-  return pathname === "/" || pathname === "/get-started"
+  return ["/", "/get-started", "/community", "/login"].includes(pathname)
     ? "black-background"
     : "white-background";
 }
+

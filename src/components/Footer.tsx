@@ -9,7 +9,7 @@ export default function Footer() {
     <>
       <footer className="footer-main">
         <div className="container">
-          <div className="footer-top footer-text bg-[#000] relative rounded-[32px] z-[1]  flex gap-[20px] justify-between items-center flex-col p-[35px] md:py-[85px] md:px-[50px] mt-[-40px] md:mt-[-80px] lg:py-[85px] lg:px-[122px] md:flex-row lg:mt-[-180px] ">
+          <div className="footer-top footer-text bg-[#000] relative rounded-[32px] z-[1]  flex gap-[20px] justify-between items-center flex-col p-[35px] md:py-[85px] md:px-[50px] mt-[-140px] md:mt-[-180px] lg:py-[85px] lg:px-[122px] md:flex-row lg:mt-[-180px] ">
             <h2 className="text-[#fff] font-HelveticaNeue max-w-[596px] text-center md:text-left !text-[20px] md:!text-[38px]">  
               Build trading algorithms with AI, backtest them, then execute —
               all in one platform. No coding skills required.
@@ -24,7 +24,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <div className="footer-middle flex flex-col gap-[40px] justify-between w-full text-left pt-[30px] pb-[30px] md:pb-[60px] md:pt-[120px] md:flex-row ">
+          <div className="footer-middle flex flex-col gap-[40px] justify-between w-full text-left pt-[30px] pb-[30px] md:pb-[60px] md:pt-[80px] lg:pt-[120px] md:flex-row ">
             <div className="flex justify-between gap-[20px]  w-full md:max-w-[400px]">
               <div className="w-[50%] md:w-auto ">
                 <h4 className="uppercase font-HelveticaNeue leading-none tracking-wider mb-[20px] md:leading-tight md:tracking-[3px] text-base md:text-xl md:mb-[40px]">Company</h4>

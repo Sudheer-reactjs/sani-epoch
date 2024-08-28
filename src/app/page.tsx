@@ -187,7 +187,7 @@ export default function Home() {
           </div>
           <LogoSlider />
         </section>
-        <section className="w-full inline-block text-center">   
+        <section className="w-full inline-block text-center pb-[80px] md:pb-[100px] lg:pb-0">   
            <TextScroll />
         </section>
       </main>
