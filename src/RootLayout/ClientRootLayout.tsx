@@ -11,7 +11,7 @@ export default function ClientRootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  const hideFooterRoutes = ['/login'];
+  const hideHeaderRoutes = ["/login"]; 
   const bodyId = useBodyId();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function ClientRootLayout({
 
   return (
     <>
-      {!hideFooterRoutes.includes(pathname) && <Header />}
+      {!hideHeaderRoutes.includes(pathname) && <Header />}
       {children}
       <Footer />
     </>

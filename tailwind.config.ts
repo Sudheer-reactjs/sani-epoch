@@ -24,6 +24,8 @@ const config: Config = {
         'custom-black': 'rgba(0, 0, 0, 0.65)', 
         'custom-black-10': 'rgba(0, 0, 0, 0.10)', 
         'custom-white-10': 'rgba(255, 255, 255, 0.10)',
+        'custom-white-15': 'rgba(255, 255, 255, 0.15)',
+        'custom-white-50': 'rgba(255, 255, 255, 0.50)',
       },
 
     },

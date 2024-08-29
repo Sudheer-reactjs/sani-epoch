@@ -1,8 +1,11 @@
 "use client";
 import { NextIcon, PervIcon, SelectDownIcon, SelectUpIcon } from "@/utlis/svg";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Slider from "react-slick"; // Import Slick Slider
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import BlogImage1 from "@/assets/images/Blog1.jpg";
 import BlogImage2 from "@/assets/images/Blog2.jpg";
 import BlogImage3 from "@/assets/images/Blog3.jpg";
@@ -11,113 +14,134 @@ import BlogImage3 from "@/assets/images/Blog3.jpg";
 const blogData = [
   {
     id: 1,
-    category: "Business",
+    category: "Editors’ picks",
     image: BlogImage1,
     heading: "A new type of chart — Session volume profile",
-    description:
-      "The chart shows volume histograms for the specified sessions, sub-sessions, or time intervals set in the settings.",
     date: "2024-08-24",
   },
   {
     id: 2,
-    category: "Charting",
+    category: "Popular",
     image: BlogImage2,
     heading: "Empowering the financial education with UFABC",
-    description:
-      "Founded in 2005, UFABC initially offered the Bachelor in Science and Technology program.",
     date: "2024-08-20",
   },
   {
     id: 3,
-    category: "Charting",
+    category: "Editors’ picks",
     image: BlogImage3,
     heading: "Synchronized bar replay",
-    description:
-      "And we re finally ready to present you the long-awaited feature — a synchronized Bar Replay!",
     date: "2024-08-16",
   },
   {
     id: 4,
-    category: "Business",
+    category: "Popular",
     image: BlogImage1,
     heading: "Introducing Trade nation, a new broker on Epochfin",
-    description:
-      "Welcome Trade Nation, a newly integrated broker within the TradingView trading ecosystem. Access CFD and spread trading on 1,000+ markets.",
     date: "2024-08-22",
   },
   {
     id: 5,
-    category: "Screeners",
+    category: "Editors’ picks",
     image: BlogImage2,
     heading: "Welcoming ThinkMarkets: new brokerage on TradingView",
-    description:
-      "To bring markets closer to your desktops, we’ve expanded our trading offerings and added one more valuable partner to the brokers’ list.",
     date: "2024-08-10",
   },
   {
     id: 6,
-    category: "Brokerage",
+    category: "Popular",
     image: BlogImage3,
     heading: "Introducing moomoo: new broker on TradingView",
-    description: "Description for business blog 1",
     date: "2024-08-05",
   },
   {
     id: 7,
-    category: "Screeners",
+    category: "Editors’ picks",
     image: BlogImage1,
     heading: "Introducing moomoo: new broker on TradingView",
-    description: "Description for business blog 1",
     date: "2024-08-24",
   },
   {
     id: 8,
-    category: "Mobile",
+    category: "Popular",
     image: BlogImage2,
     heading: "Display visuals on the chart from your pane scripts",
-    description: "Description for business blog 1",
     date: "2024-08-24",
   },
   {
     id: 9,
-    category: "Trade and brokerage",
+    category: "Editors’ picks",
     image: BlogImage2,
     heading: "The Leap is back with 250 cash prizes to win",
-    description: "Description for business blog 1",
     date: "2024-08-24",
   },
 ];
 
 const categories = [
   "All",
-  "Business",
-  "Charting",
-  "Mobile",
-  "Screeners",
-  "Trade and brokerage",
-  "Demo",
-  "Demo2",
-  "Demo3",
+  "Editors’ picks",
+  "Popular",
+
 ];
 
-export default function Home() {
+export default function EducationalIdeasCard() {
   const [activeTab, setActiveTab] = useState(0);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [sliderKey, setSliderKey] = useState(0); // Key for forcing slider remount
   const tabsContainerRef = useRef<HTMLDivElement | null>(null);
+  const sliderRef = useRef<Slider | null>(null); // Reference to the slider
 
-  const scrollLeft = () => {
-    tabsContainerRef.current?.scrollBy({
-      left: -150,
-      behavior: "smooth",
-    });
+  const sliderBlogSettings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrow: true,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            },
+          },
+      { 
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+      breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrow: false,
+            dots: true,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+            arrow: false,
+            dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
-  const scrollRight = () => {
-    tabsContainerRef.current?.scrollBy({
-      left: 150,
-      behavior: "smooth",
-    });
-  };
+  // Force slider to update its position when the active tab changes
+  useEffect(() => {
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(0); // Go to the first slide to reset the position
+    }
+    // Force slider to re-render by updating the key
+    setSliderKey((prev) => prev + 1);
+  }, [activeTab]);
 
   // Filter blog posts by category
   const filteredBlogs = (category: string) => {
@@ -134,7 +158,7 @@ export default function Home() {
       <Link
         href={`/blog/posts/${blog.id}`}
         key={blog.id}
-        className="inline-block w-full blog-card-custom bg-custom-gray rounded-[32px] py-[12px] px-[6px] md:py-[16px] md:px-[18px] cursor-pointer"
+        className="blog-card-custom slider-card-custom bg-custom-gray rounded-[32px] p-[10px] cursor-pointer"
       >
         <div className="relative">
           <Image
@@ -142,20 +166,14 @@ export default function Home() {
             alt={blog.heading}
             className="w-full h-auto rounded-[24px]"
             width={1000}
-            height={1000}
+            height={1000} 
           />
-          <div className="absolute bg-black rounded-[90px] text-white text-[14px] top-[15px] py-[7px] px-[24px] left-[15px]  md:top-[25px]  md:left-[25px] md:text-[18px]">
-            {blog.category}
-          </div>
         </div>
         <div className="blog-list py-[20px] px-[20px]">
-          <h3 className="text-black  font-HelveticaNeueMedium leading-[24px] text-[20px] md:leading-[32px] md:text-[24px]">
+          <h3 className="text-black text-center line-clamp-2 font-HelveticaNeueMedium leading-[24px] text-[20px] md:leading-[32px] md:min-h-[58px] md:text-[24px] md:text-left">
             {blog.heading}
           </h3>
-          <p className="text-black text-[16px] pt-[14px] md:text-[20px]">
-            {blog.description}
-          </p>
-          <span className="text-custom-black text-[14px] mt-[10px] block md:mt-[30px]  md:text-[20px] ">
+          <span className="text-custom-black text-center text-[14px] mt-[10px] block md:mt-[15px]  md:text-[16px]  md:text-left">
             {blog.date}
           </span>
         </div>
@@ -164,8 +182,10 @@ export default function Home() {
   }));
 
   return (
-    <div className="tabs-container">
-      <div className="block md:hidden mb-4 relative">
+    <div className="tabs-container  py-[35px] border-b border-custom-black-10 bottom-1 md:px-[20px] lg:py-[90px]">
+        <div className="flex flex-wrap gap-[20px] lg:flex-nowrap lg:items-center lg:justify-between">
+       <h2 className=" w-full whitespace-nowrap text-center lg:text-left lg:w-max">Educational ideas</h2>
+      <div className="block w-full lg:hidden relative">
         <button
           onClick={() => setDropdownOpen(!dropdownOpen)}
           className="w-full bg-white rounded-[90px] py-[12px] px-[24px] text-black text-[18px] flex justify-between items-center text-left"
@@ -197,16 +217,10 @@ export default function Home() {
       </div>
 
       {/* Tabs for desktop */}
-      <div className="hidden md:flex items-center relative before-bg">
-        <button
-          onClick={scrollLeft}
-          className="arrow-button p-0 bg-transparent absolute left-0 top-0 z-[2]"
-        >
-          <PervIcon />
-        </button>
+      <div className="hidden lg:flex items-center relative">
         <div
           ref={tabsContainerRef}
-          className="flex space-x-2 py-0 overflow-x-auto scrollbar-hide relative custom-scrollbar pr-[30px] pl-[10px] ml-[30px] w-[calc(100%-60px)] md:pl-[40px] md:pr-[60px] md:space-x-4"
+          className="flex flex-wrap gap-[15px] relative "
         >
           {categoryLabels.map((tab, index) => (
             <button
@@ -222,17 +236,13 @@ export default function Home() {
             </button>
           ))}
         </div>
-        <button
-          onClick={scrollRight}
-          className="arrow-button  p-0 bg-transparent absolute right-0 top-0 z-[2]"
-        >
-          <NextIcon />
-        </button>
       </div>
-
+      </div>
       {/* Blog posts content */}
-      <div className="tab-content-custom tab-content flex flex-wrap gap-[25px] mt-[25px] mb-[60px] md:gap-[35px] md:mt-[45px] md:mb-[100px] lg:mb-[180px]">
-        {categoryLabels[activeTab].content}
+      <div className="tab-content slick-arrow-custom slider-dots slider-dots-bg item-gap pt-[30px] lg:pt-[60px]">
+        <Slider ref={sliderRef} key={sliderKey} {...sliderBlogSettings}>
+          {categoryLabels[activeTab].content}
+        </Slider>
       </div>
     </div>
   );

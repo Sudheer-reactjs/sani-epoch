@@ -451,3 +451,21 @@ export const BrainIcon = () => (
     </svg>
     
     );
+    export const AvailableIcon =() => (
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 6L9 17L4 12" stroke="url(#paint0_linear_215_4276)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_215_4276" x1="2.93333" y1="5.35833" x2="13.8281" y2="21.4529" gradientUnits="userSpaceOnUse">
+<stop stop-color="#19B0B1"/>
+<stop offset="1" stop-color="#0951A6"/>
+</linearGradient>
+</defs>
+</svg>
+
+    );
+    export const NotAvailableIcon =() => (
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 7L7 17M7 7L17 17" opacity="0.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+      );

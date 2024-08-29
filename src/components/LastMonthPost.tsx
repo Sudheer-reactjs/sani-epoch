@@ -103,7 +103,7 @@ const filterBlogsByLastMonth = (blogs: typeof blogData) => {
 
 const recentBlogs = filterBlogsByLastMonth(blogData);
 
-export default function RecentPosts() {
+export default function LastMonthPost() { 
   const [visibleBlogs, setVisibleBlogs] = useState(8);
 
   const loadMoreBlogs = () => {
@@ -119,7 +119,7 @@ export default function RecentPosts() {
         >
           <Link
             href={`/blog/posts/${blog.id}`}
-            className=" relative flex flex-wrap md:flex-nowrap md:items-center"
+            className=" relative flex w-full flex-wrap md:flex-nowrap md:items-center"
           >
             <div className="w-full md:max-w-[150px] lg:max-w-[184px]">
               <Image

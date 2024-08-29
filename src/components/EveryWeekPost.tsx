@@ -114,7 +114,7 @@ export default function RecentPosts() {
     <div className="flex flex-wrap gap-6">
       {recentBlogs.map((blog) => (
         <div key={blog.id} className="week-blog rounded-lg">
-          <Link href={`/blog/posts/${blog.id}`} key={blog.id} className=" relative">
+          <Link href={`/blog/posts/${blog.id}`} key={blog.id} className="inline-block w-full relative">
             <Image
               src={blog.image}
               alt={blog.heading}

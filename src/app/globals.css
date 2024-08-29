@@ -277,7 +277,41 @@ section.banner-ingo::before {
 .slider-dots ul.slick-dots {
   position: relative !important;
   border: 0 !important;
+  bottom: 0 !important;
+  margin-top: 20px;
+} 
+.tab-bg-before::before {
+  opacity: 0.5;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(43, 43, 43, 0.15) 100%);
+  box-shadow: 30px 45px 70px 0px rgba(17, 17, 17, 0.20);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border-radius: 90px;
+  z-index: -1;
+  left: 0;
 }
+.price-grid{
+border-radius: 24px;
+border: 1px solid rgba(255, 255, 255, 0.25);
+box-shadow: 30px 45px 70px 0px rgba(17, 17, 17, 0.20);
+z-index: 1;
+}
+.price-grid::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.5;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(43, 43, 43, 0.15) 100%);
+  backdrop-filter: blur(7.5px);
+  }
 @media (prefers-reduced-motion: reduce) {
   .marquee__group {
     animation-play-state: paused;
@@ -307,12 +341,6 @@ section.banner-ingo::before {
   background-position: center;
   background-repeat: no-repeat;
 }
-body#black-background .logo-black {
-  display: none;
-}
-body#white-background .logo-white {
-  display: none;
-} 
 body#white-background .header-bg {
   background: rgb(255 255 255 / 15%);
   border-color: rgb(25 25 25 / 10%);
@@ -465,6 +493,74 @@ line-height: 18px;
   background-position: top;
   background-size: contain;
 }
+/********footer-color******/
+#black-background  .footer-bg ~ footer.footer-main .footer-top {
+  background: #000;
+  backdrop-filter: blur(0px);
+  box-shadow: none;
+  border: none;
+}
+#black-background .footer-bg ~ footer.footer-main {
+  background: #fff;
+  color: #000;
+}
+#black-background .footer-bg ~ footer.footer-main .footer-middle a {
+  color: #000000;
+}
+#black-background .footer-bg ~ footer.footer-main .news-form p{
+  opacity: 1;
+} 
+#black-background .footer-bg ~ footer.footer-main .input-border, 
+#black-background .footer-bg ~ footer.footer-main .input-border  .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(0, 0, 0, 0.35) !important;
+  color: #000000;
+}
+#black-background .footer-bg ~ footer.footer-main .submitbutton path{
+  fill: #000000; 
+}
+#black-background .footer-bg ~ footer.footer-main .custom-p-0 path{
+  fill: #000000; 
+}
+#black-background .footer-bg ~ footer.footer-main .footer-bottom{
+  border-top-color: rgba(0, 0, 0, 0.15) !important;
+}
+#black-background .footer-bg ~ footer.footer-main .footer-bottom p, 
+#black-background .footer-bg ~ footer.footer-main .footer-bottom li a {
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.item-gap .slick-slide {
+  padding: 0 13px;
+}
+.slider-card-custom img {
+  aspect-ratio: 1/0.8;
+}
+.slick-arrow-custom .slick-prev {
+  background: url('../assets/images/perv-icon.svg') no-repeat center center !important;
+  background-size: contain !important;
+}
+
+.slick-arrow-custom .slick-next {
+  background: url('../assets//images/next-icon.svg') no-repeat center center !important;
+  background-size: contain !important;
+}
+.slick-arrow-custom .slick-prev, .slick-arrow-custom .slick-next {
+  width: 58px !important;
+  height: 58px !important;
+  z-index: 1;
+  font-size: 0px !important;
+  top: 31%;
+}
+.slick-arrow-custom .slick-prev:before, .slick-arrow-custom .slick-next:before {
+  display: none;;
+}
+.slick-arrow-custom .slick-disabled {
+  opacity: 0.7;
+  display: none !important;
+}
+.slider-dots.slider-dots-bg .slick-dots li button {
+  background: #000000;
+}
+/**********/
 @keyframes scroll-x {
   from {
     transform: translateX(var(--scroll-start));
@@ -678,10 +774,21 @@ body#white-background footer.footer-main a, body#white-background footer.footer-
 .black-background {
   background-image: url(../assets/images/signupBGmobile.png);
 }
+.slick-arrow-custom .slick-prev, 
+.slick-arrow-custom .slick-next {
+  display: none !important;
+}
+.item-gap .slick-slide {
+padding: 0 10px;
+}
 }
 
-
-
+@media (max-width:640px) {
+  .item-gap .slick-slide {
+    padding: 0;
+    }
+}
+ 
 
 
 

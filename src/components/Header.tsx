@@ -1,14 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { HumburgerCloseIcon, HumburgerIcon, LogoBlack, LogoWhite } from "@/utlis/svg";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
+  }; 
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -23,15 +25,22 @@ const Header: React.FC = () => {
     };
   }, [isMenuOpen]);
 
+  const renderLogo = () => {
+    if (pathname === "/" || pathname === "/get-started" || pathname === "/community") { 
+      return <LogoWhite />;
+    } else {
+      return <LogoBlack />;
+    }
+  };
+
   return (
-    <header className="footer-main flex items-center justify-between py-[14px] fixed z-10 top-0 w-full"> 
+    <header className="flex items-center justify-between py-[14px] fixed z-10 top-0 w-full"> 
       <div className="container">
         <div className="header-bg relative z-[9] flex items-center justify-between border-[1px] py-[10px] px-[18px] border-[#191919] rounded-[6px] lg:py-[5px] lg:px-[8px]">
           {/* Logo */} 
           <div className="flex items-center lg:min-w-[220px]">
-            <Link href="/" className="text-xl font-bold"> 
-              <div className="logo-white"><LogoWhite /></div>
-              <div className="logo-black"><LogoBlack /></div>
+            <Link href="/" className="text-xl font-bold">
+              <div className="logo">{renderLogo()}</div>
             </Link>
           </div>
 

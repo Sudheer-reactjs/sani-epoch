@@ -10,7 +10,7 @@ import IbmImage from "@/assets/images/ibm.png";
 import OracleImage from "@/assets/images/oracle.png";
 import VmwareImage from "@/assets/images/vmware.png";
 
-const Marquee = () => {
+const LogoSlider = () => {
   useEffect(() => {
     const control = document.getElementById("direction-toggle");
     const wrapper = document.querySelector(".wrapper");
@@ -127,4 +127,4 @@ const Marquee = () => {
   );
 };
 
-export default Marquee;
+export default LogoSlider;
