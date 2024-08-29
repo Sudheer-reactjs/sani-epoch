@@ -97,9 +97,10 @@ nav a {
 .black-background .header-bg {
   background: rgb(0 0 0 / 15%);
 }
-.header-bg{
-  backdrop-filter: saturate(100%) blur(10px); 
-  background: rgb(0 0 0 / 15%);
+.header-bg {
+  backdrop-filter: saturate(100%) blur(10px);
+  -webkit-backdrop-filter: saturate(100%) blur(10px); /* For Safari and some WebKit-based browsers */
+  background: rgba(0, 0, 0, 0.15); /* Same as rgb(0 0 0 / 15%) */
 }
 h2 {
   font-size: 38px;
@@ -169,6 +170,7 @@ padding: 0;
   background: rgba(0, 0, 0, 0.00);
   box-shadow: 0px -40px 50px 0px rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(12.5px); 
+  -webkit-backdrop-filter:  blur(12.5px);
 }
 #black-background  .footer-middle a {
   color: #757575;
@@ -235,6 +237,7 @@ letter-spacing: -1.36px;
 }
 .blog-card-custom{
   backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
 }
 .week-blog img {
   aspect-ratio: 1/1.42;
@@ -306,11 +309,12 @@ z-index: 1;
   height: 100%;
   top: 0px;
   left: 0px;
-  z-index: -1;
+  z-index: -1; 
   opacity: 0.5;
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(43, 43, 43, 0.15) 100%);
   backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px); 
   }
 @media (prefers-reduced-motion: reduce) {
   .marquee__group {
