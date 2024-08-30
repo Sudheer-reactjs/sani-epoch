@@ -469,3 +469,57 @@ export const BrainIcon = () => (
 </svg>
 
       );
+
+export const SwitchIcon = () =>( 
+  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="30" viewBox="0 0 60 30" fill="none">
+  <g filter="url(#filter0_bd_215_4194)">
+    <rect x="0" y="0" width="60" height="30" rx="15" fill="url(#paint0_linear_215_4194)"/>
+    <rect x="0" y="0" width="59" height="29" rx="14.5" stroke="white" stroke-opacity="0.35"/>
+  </g>
+  <g filter="url(#filter1_bd_215_4194)">
+    <rect x="6" y="4" width="22" height="22" rx="11" fill="white"/>
+    <rect x="0" y="0" width="21" height="21" rx="10.5" stroke="white" stroke-opacity="0.35"/>
+  </g>
+  <defs>
+    <filter id="filter0_bd_215_4194" x="0" y="0" width="200" height="170" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feGaussianBlur in="BackgroundImageFix" stdDeviation="7.5"/>
+      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_215_4194"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="30" dy="45"/>
+      <feGaussianBlur stdDeviation="35"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0666667 0 0 0 0 0.0666667 0 0 0 0 0.0666667 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="effect1_backgroundBlur_215_4194" result="effect2_dropShadow_215_4194"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_215_4194" result="shape"/>
+    </filter>
+    <filter id="filter1_bd_215_4194" x="5" y="4" width="162" height="162" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feGaussianBlur in="BackgroundImageFix" stdDeviation="7.5"/>
+      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_215_4194"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="30" dy="45"/>
+      <feGaussianBlur stdDeviation="35"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0666667 0 0 0 0 0.0666667 0 0 0 0 0.0666667 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="effect1_backgroundBlur_215_4194" result="effect2_dropShadow_215_4194"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_215_4194" result="shape"/>
+    </filter>
+    <linearGradient id="paint0_linear_215_4194" x1="36" y1="23.25" x2="61.3641" y2="74.7708" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#19B0B1"/>
+      <stop offset="1" stop-color="#0951A6"/>
+    </linearGradient>
+  </defs>
+</svg>
+);
+export const ArrowUpIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 15L12 9L6 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+);
+export const ArrowDownIcon = () => (
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+);

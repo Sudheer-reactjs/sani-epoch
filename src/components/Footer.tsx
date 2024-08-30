@@ -47,10 +47,10 @@ export default function Footer() {
             <NewsletterForm /> 
           </div>
           <div className="footer-bottom flex-col-reverse border-solid border-t py-[24px] flex justify-center text-center gap-[10px] md:flex-row md:justify-between md:text-left" style={{ borderTopColor: "rgba(0, 0, 0, 0.15)" }}>
-            <p className="opacity-45 text-[#000] text-[15px] md:text-[18px]">© 2024 Epochfin, All rights reserved.</p>
+            <p className="opacity-45 text-[#000] text-[15px] md:text-[18px] !font-HelveticaNeueThinnt">© 2024 Epochfin, All rights reserved.</p>
              <ul className="opacity-45 text-[#000] flex gap-[15px] text-[15px]  justify-center  md:justify-start md:text-[18px]">
-               <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-               <li><Link href="/terms-conditions">Terms & Conditions</Link></li>
+               <li><Link href="/privacy-policy"  className="font-HelveticaNeueThinnt">Privacy Policy</Link></li>
+               <li><Link href="/terms-conditions" className="font-HelveticaNeueThinnt">Terms & Conditions</Link></li>
              </ul>
           </div>
         </div>

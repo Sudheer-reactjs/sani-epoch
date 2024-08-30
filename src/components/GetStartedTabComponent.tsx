@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import PlanComparison from "./PlanComparison";
+import { SwitchIcon } from "@/utlis/svg";
 
 const GetStartedTabComponent = () => {
   const [activeTab, setActiveTab] = useState("non-professional");
@@ -46,9 +47,10 @@ const GetStartedTabComponent = () => {
             <h2 className="max-w-[540px] mx-auto"> 
               Upgrade to unlock more features and unlimited access
             </h2>
-            <p className="text-[#757575] max-w-[600px] mx-auto mt-[15px] md:text-[20px] md:leading-[30px]">
+            <p className="text-[#757575] max-w-[600px] mx-auto mt-[15px] mb-[30px] md:text-[20px] md:leading-[30px]">
               Discover the ideal plan, 25% discount on the annual plan.
             </p>
+              <p className="flex items-center gap-[12px] justify-center mb-[60px] text-[20px]">Monthly <SwitchIcon /> Anually</p>
             <PlanComparison />
           </div>
         )}

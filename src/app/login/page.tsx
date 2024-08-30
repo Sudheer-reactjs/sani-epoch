@@ -182,7 +182,7 @@ const Page: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="w-full inline-block text-center pb-[80px] md:pb-[100px] lg:pb-0">
+      <section className="w-full inline-block text-center pb-[100px] md:pb-[100px] lg:pb-0">
         <TextScroll />
       </section>
     </main>

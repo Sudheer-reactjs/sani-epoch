@@ -167,7 +167,7 @@ padding: 0;
 #black-background .footer-top {
   border-radius: 32px;
   border: 2px solid var(--grad-1, #19B0B1);
-  background: rgba(0, 0, 0, 0.00);
+  background: rgba(0, 0, 0, 0.6);
   box-shadow: 0px -40px 50px 0px rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(12.5px); 
   -webkit-backdrop-filter:  blur(12.5px);
@@ -314,7 +314,7 @@ z-index: 1;
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(43, 43, 43, 0.15) 100%);
   backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px); 
+  -webkit-backdrop-filter: blur(7.5px);  
   }
 @media (prefers-reduced-motion: reduce) {
   .marquee__group {
@@ -392,7 +392,7 @@ body#white-background a.get-started {
   left: 0;
 }
 body#black-background footer.footer-main {
-  background: #000;
+  background-color: #000;
 }
 body#white-background button.menuicon svg path { 
   fill: #000;
@@ -563,6 +563,32 @@ line-height: 18px;
 }
 .slider-dots.slider-dots-bg .slick-dots li button {
   background: #000000;
+}
+.text-gradient {
+  background: var(--grad-1, linear-gradient(135deg, #19B0B1 -6.25%, #0951A6 101.26%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.get-bg {
+  background-image: url(../assets/images/Getting-started.jpg);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.border-after:after {
+  position: absolute;
+  content: "";
+  width: 153px;
+  top: 0;
+  height: 100%;
+  border: solid 2px #19B0B1;
+  right: 58px;
+  border-radius: 32px;
+  pointer-events: none;
+}
+.last-child-css .list-child:last-child ul {
+  margin: 0;
 }
 /**********/
 @keyframes scroll-x {

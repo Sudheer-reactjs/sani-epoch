@@ -117,16 +117,16 @@ const PlanComparison = () => {
   return (
     <div className="flex flex-col lg:flex-row justify-center gap-[40px]">
       {plans.map((plan) => (
-        <div key={plan.planName} className="price-grid relative w-full lg:w-1/3"> 
-          <div className="">
-            <h4 className="text-[#757575] font-HelveticaNeueMedium text-[20px]">{plan.planName}</h4>
+        <div key={plan.planName} className="price-grid relative w-full max-w-[500px] mx-auto lg:w-1/3">  
+          <div className="py-[35px] px-[15px] border-b-[1px] border-solid border-custom-white-10">
+            <h4 className="text-[#757575] font-HelveticaNeueMedium text-[20px] mb-[10px]">{plan.planName}</h4>
             <div className="flex gap-[10px] justify-center items-end">
               <h3 className="font-semibold text-center font-HelveticaNeue leading-[68px] text-[68px]">
                 {plan.monthlyPrice}
               </h3>
               <span className="text-[#757575] text-[16px]">{plan.perMonth}</span>
             </div>
-            <p className="text-center text-gray-500 mt-[14px] mb-[28px]">
+            <p className="text-center text-[#757575] mt-[14px] mb-[28px]">
               {plan.anuallyPrice}
             </p>
             <div className="flex justify-center">
@@ -135,19 +135,19 @@ const PlanComparison = () => {
                 <ButtonArrow />
               </Link>
             </div>
-            <p className="text-center text-gray-500 my-4"> 
+            <p className="text-center text-[#757575] text-[18px] mt-[10px]"> 
               {plan.skipTrial}
-              <Link className="" href="#">
+              <Link className="text-gradient font-HelveticaNeueMedium" href="#">
                 {" "}
                 {plan.payNow}
               </Link>
             </p>
           </div>
-          <ul className="space-y-2">
+          <ul className="pt-[40px] pb-[70px] px-[32px] space-y-[15px]">
             {plan.features.map((feature, index) => (
               <li
                 key={index}
-                className={`flex items-center gap-2 ${
+                className={`flex items-center gap-[15px] text-left leading-[22px] font-HelveticaNeueThin justify-start text-[18px] ${
                   feature.available ? "text-white" : "text-custom-white-50"
                 }`}
               >

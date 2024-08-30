@@ -22,7 +22,7 @@ const NewsletterForm = () => {
       <h4 className="uppercase font-HelveticaNeue leading-none tracking-wider mb-[20px] md:leading-tight md:tracking-[3px] text-base md:text-xl md:mb-[40px]">
         Newsletter & Blogs
       </h4>
-      <p className="mb-[18px]">Subscribe our newsletter and get up to date about our updates</p>
+      <p className="mb-[18px] font-HelveticaNeue">Subscribe our newsletter and get up to date about our updates</p>
       <div className="relative">
         <OutlinedInput
           placeholder="Email address"

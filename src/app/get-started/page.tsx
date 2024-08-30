@@ -5,18 +5,18 @@ import TextScroll from "@/components/TextScroll";
 import LogoSlider from "@/components/LogoSlider";
 import { ButtonArrow } from "@/utlis/svg";
 import GetStartedTabComponent from "@/components/GetStartedTabComponent";
+import ComparePlansTable from "@/components/ComparePlansTable";
 
 export default function page() {
   return (
     <>
       <main
-        className="pt-[100px] bg-black bg-cover bg-top relative z-[1]"
-        style={{ paddingTop: "110px" }}
+        className="pt-[78px] get-bg bg-black bg-top relative z-[1]"
       >
-        <section className="w-full inline-block text-center py-[120px]">
+        <section className="w-full inline-block text-center pt-[20px] pb-[180px] md:py-[120px]">
           <div className="container">
-            <h1>Free, until you’re ready</h1>
-            <p className="text-[#757575] max-w-[600px] mx-auto mt-[24px] mb-[35px] md:text-[20px] md:leading-[30px]">
+            <h1 className="max-w-[250px] mx-auto md:max-w-full">Free, until you’re ready</h1> 
+            <p className="text-[#757575] max-w-[600px] px-[25px] mx-auto mt-[15px] mb-[24px] md:px-[0] md:text-[20px] md:leading-[30px] md:mt-[24px] md:mb-[35px]">
               Look first at how all the markets are performing. Then leap into
               them on the platform used by 60 million traders.
             </p>
@@ -32,9 +32,14 @@ export default function page() {
           </div>
         </section>
 
-        <section className="w-full inline-block text-center pb-[180px]">
+        <section className="w-full inline-block text-center ">
           <div className="container">
             <GetStartedTabComponent />
+          </div>
+        </section>
+        <section className="ComparePlansTable w-full inline-block text-center  pt-[100px] ">
+          <div className="container">
+            <ComparePlansTable />
           </div>
         </section>
 
@@ -47,8 +52,8 @@ export default function page() {
           <LogoSlider />
         </section>
 
-        <section className="w-full inline-block text-center pb-[80px] md:pb-[100px] lg:pb-0">
-          <TextScroll />
+        <section className="w-full inline-block text-center pb-[100px] md:pb-[100px] lg:pb-0">
+          <TextScroll /> 
         </section>
       </main>
     </>
