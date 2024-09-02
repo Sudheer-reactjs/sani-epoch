@@ -26,8 +26,6 @@ const LogoSlider = () => {
         );
       });
     }
-
-    // Cleanup event listener on component unmount
     return () => {
       if (control) {
         control.removeEventListener("click", () => {});

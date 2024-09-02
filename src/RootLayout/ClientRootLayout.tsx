@@ -11,7 +11,7 @@ export default function ClientRootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  const hideHeaderRoutes = ["/login"]; 
+  const hideHeaderRoutes = ["/login", "/signup"];  
   const bodyId = useBodyId();
 
   useEffect(() => {

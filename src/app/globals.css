@@ -310,9 +310,8 @@ z-index: 1;
   top: 0px;
   left: 0px;
   z-index: -1; 
-  opacity: 0.5;
   border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(43, 43, 43, 0.15) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(43, 43, 43, 0.05) 100%);
   backdrop-filter: blur(7.5px);
   -webkit-backdrop-filter: blur(7.5px);  
   }
@@ -590,6 +589,23 @@ line-height: 18px;
 .last-child-css .list-child:last-child ul {
   margin: 0;
 }
+.plan-slider-container button.slick-arrow::before{
+  display: none;
+}
+.plan-slider-container button.slick-arrow.slick-prev{
+  background-image: url(../assets/images/slick-perv.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.plan-slider-container button.slick-arrow.slick-next{
+  background-image: url(../assets/images/slick-next.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.plan-slider-container ul li:first-child {
+  border-top: none;
+}
 /**********/
 @keyframes scroll-x {
   from {
@@ -811,6 +827,10 @@ body#white-background footer.footer-main a, body#white-background footer.footer-
 .item-gap .slick-slide {
 padding: 0 10px;
 }
+.get-bg {
+  background-image: url(../assets/images/getting-started-mobile.jpg);
+}
+
 }
 
 @media (max-width:640px) {

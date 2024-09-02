@@ -320,7 +320,7 @@ const Accordion: React.FC = () => {
 
   return (
     <>
-    <div className="hidden border-after relative lg:block">
+    <div className=" border-after relative inline-block w-full">
       <div className="text-white font-HelveticaNeueThin  text-[18px]">
         <ul className="list-none p-0 py-[25px]">
           <li className="text-left grid-[10px] flex items-center flex-nowrap min-h-[70px] px-[26px] pr-[60px]">

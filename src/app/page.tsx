@@ -161,7 +161,7 @@ export default function Home() {
                 imageSrcMobile={ExploreImage}
                 text="Leverage community strategies to trade, sell and share insights with fellow traders."
                 buttonText="Explore community"
-                buttonLink="/"
+                buttonLink="/community"
                 imagePosition="right"
               />
             </div>

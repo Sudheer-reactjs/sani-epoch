@@ -45,5 +45,5 @@ const CommunityCardSlider: React.FC = () => {
     </>
   );
 };
-
+ 
 export default CommunityCardSlider;

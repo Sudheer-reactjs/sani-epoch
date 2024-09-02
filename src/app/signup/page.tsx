@@ -52,12 +52,12 @@ const Page: React.FC = () => {
         </div>
 
         <div className="customborder grid md:grid-cols-2 gap-4 px-[50px]">
-          <button className="relative font-HelveticaNeueThin  flex items-center gap-[15px] justify-center bg-[#191919] py-3 px-4 rounded-lg"> 
+          <button className="relative font-HelveticaNeueThin flex items-center gap-[15px] justify-center bg-[#191919] py-3 px-4 rounded-lg"> 
             Sign up with Google
             <GoogleIcon />
           </button>
 
-          <button className="relative font-HelveticaNeueThin  flex items-center gap-[15px] justify-center bg-[#191919] py-3 px-4 rounded-lg">
+          <button className="relative font-HelveticaNeueThin flex items-center gap-[15px] justify-center bg-[#191919] py-3 px-4 rounded-lg">
             Sign up with Facebook
             <FacebookIcon />
           </button>
@@ -69,6 +69,33 @@ const Page: React.FC = () => {
         </div>
 
         <form onSubmit={handleSubmit} className=" px-5 md:px-[50px] login-form">
+          <div className="grid md:grid-cols-2 gap-4 mb-5">
+            <label htmlFor="">
+              First Name
+              <div className="input-border relative">
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formValues.firstName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </label>
+            <label htmlFor="">
+            Last Name
+              <div className="input-border relative">
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formValues.lastName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </label>
+          </div>
+
           <div className="mb-5">
             <label htmlFor="">
             Email Address
@@ -100,6 +127,9 @@ const Page: React.FC = () => {
                   required
                 />
               </div>
+              <p className="text-base mt-1">
+                At least 8 characters, with numbers and symbols.
+              </p>
               <button
                 type="button"
                 className="absolute right-3 top-[40px] z-10"
@@ -124,7 +154,7 @@ const Page: React.FC = () => {
           </div>
 
           <button type="submit" className="!w-full button-black !text-sm">
-            Login
+            Create Account
           </button>
         </form>
 
