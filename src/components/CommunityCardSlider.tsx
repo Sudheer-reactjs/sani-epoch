@@ -33,6 +33,7 @@ const renderCards = () => {
 const CommunityCardSlider: React.FC = () => { 
   return (
     <>
+       <h2 className='text-[#fff] h1'>Feel the love in <br></br>Epoch community</h2>
       {/* Desktop view: Grid display */}
       <div className="hidden md:grid grid-cols-2 gap-[30px] mt-[90px] lg:grid-cols-4">
         {renderCards()}
@@ -40,7 +41,7 @@ const CommunityCardSlider: React.FC = () => {
 
       {/* Mobile view: Slider display */}
       <div className="slider-dots block md:hidden max-w-[250px] mt-[35px] mx-auto">
-        <Slider {...settings}>{renderCards()}</Slider>
+        <Slider {...settings}>{renderCards()}</Slider> 
       </div>
     </>
   );

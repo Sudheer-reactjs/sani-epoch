@@ -12,9 +12,10 @@ export default function page() {
   return (
     <>
       <main className="pt-[78px] get-bg bg-black bg-top relative z-[1]">
+       
         <section className="w-full inline-block text-center pt-[20px] pb-[180px] md:py-[120px]">
           <div className="container">
-            <h1 className="max-w-[250px] mx-auto md:max-w-full">
+            <h1 className="max-w-[250px] mx-auto md:max-w-full"> 
               Free, until you’re ready
             </h1>
             <p className="text-[#757575] max-w-[600px] px-[25px] mx-auto mt-[15px] mb-[24px] md:px-[0] md:text-[20px] md:leading-[30px] md:mt-[24px] md:mb-[35px]">
@@ -32,12 +33,15 @@ export default function page() {
             </div>
           </div>
         </section>
-
+         
+          {/*Non-professional Professional */}
         <section className="w-full inline-block text-center ">
           <div className="container">
             <GetStartedTabComponent />
           </div>
         </section>
+
+        {/*Compare plans*/}
         <section className="ComparePlansTable w-full inline-block text-center  pt-[70px] md:pt-[100px] ">
           <div className="container">
             <div className="hidden w-full lg:block">

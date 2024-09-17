@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { Button, Box, OutlinedInput, IconButton } from "@mui/material";
 import { NewsletterIcon, SocialIconFour, SocialIconOne, SocialIconThree, SocialIcontwo } from "@/utlis/svg";

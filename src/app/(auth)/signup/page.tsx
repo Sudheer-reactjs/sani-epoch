@@ -1,16 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import profile from "@/assets/images/profile.png" 
 import {
   BrainIcon,
   EyeIcon,
   FacebookIcon,
   GoogleIcon,
-  QuoteIcon,
 } from "@/utlis/svg";
+import ProAccountCard from "@/components/ProAccountCard";
 import TextScroll from "@/components/TextScroll";
-import Image from "next/image";
 const Page: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formValues, setFormValues] = useState({
@@ -50,14 +48,14 @@ const Page: React.FC = () => {
             Navigate the Markets with Confidence
           </h1>
         </div>
-
+          {/*Non-professional Professional */}
         <div className="customborder grid md:grid-cols-2 gap-4 px-[50px]">
-          <button className="relative font-HelveticaNeueThin  flex items-center gap-[15px] justify-center bg-[#191919] py-3 px-4 rounded-lg"> 
+          <button className="relative font-HelveticaNeueThin flex items-center gap-[15px] justify-center bg-[#191919] py-3 px-4 rounded-lg"> 
             Sign up with Google
             <GoogleIcon />
           </button>
 
-          <button className="relative font-HelveticaNeueThin  flex items-center gap-[15px] justify-center bg-[#191919] py-3 px-4 rounded-lg">
+          <button className="relative font-HelveticaNeueThin flex items-center gap-[15px] justify-center bg-[#191919] py-3 px-4 rounded-lg">
             Sign up with Facebook
             <FacebookIcon />
           </button>
@@ -67,8 +65,35 @@ const Page: React.FC = () => {
           {" "}
           <span className="text-sm px-2 bg-black">or</span>
         </div>
-
+         {/*signup form*/} 
         <form onSubmit={handleSubmit} className=" px-5 md:px-[50px] login-form">
+          <div className="grid md:grid-cols-2 gap-4 mb-5">
+            <label htmlFor="">
+              First Name
+              <div className="input-border relative">
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formValues.firstName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </label>
+            <label htmlFor="">
+            Last Name
+              <div className="input-border relative">
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formValues.lastName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </label>
+          </div>
+
           <div className="mb-5">
             <label htmlFor="">
             Email Address
@@ -100,6 +125,9 @@ const Page: React.FC = () => {
                   required
                 />
               </div>
+              <p className="text-base mt-1">
+                At least 8 characters, with numbers and symbols.
+              </p>
               <button
                 type="button"
                 className="absolute right-3 top-[40px] z-10"
@@ -118,13 +146,10 @@ const Page: React.FC = () => {
                 Remember this device
               </label>
             </div>
-            {/* <Link href="/forgot-password" className="text-blue-500 hover:underline">
-              Forgot password?
-            </Link> */}
           </div>
 
           <button type="submit" className="!w-full button-black !text-sm">
-            Login
+            Create Account
           </button>
         </form>
 
@@ -135,24 +160,10 @@ const Page: React.FC = () => {
           </Link>
         </div>
       </div>
-      <section className="mt-[70px] md:mt-[100px]">
-        <div className="container">
-          <div className="flex justify-center mb-10">
-            <QuoteIcon />
-          </div>
-          <p className="text-center max-w-[287px] md:max-w-[433px] mx-auto text-[#757575] text-base font-normal leading-snug ">
-            Game changing trading software that helped me{" "}
-            <span className="text-white">analysis market trends </span>easily and <span className="text-white">make better decisions</span>
-          </p>
-          <div className="mt-[10px] text-center">
-            <Image src={profile} alt="" width={48} height={48} className="mx-auto"/>
-            <p className="my-[10px] text-sm">Aaron O&apos;Donnell</p>
-            <p className="text-[#19B0B1] text-xs bg-[#ffaa2b0f] px-2 py-[5px] rounded-3xl inline-block  ">Pro Account</p>
-          </div>
-        </div>
-      </section>
-      <section className="w-full inline-block text-center pb-[100px] md:pb-[100px] lg:pb-0">
-        <TextScroll />
+
+     <ProAccountCard /> 
+     <section className="w-full inline-block text-center pb-[100px] md:pb-[100px] lg:pb-0">
+          <TextScroll />
       </section>
     </main>
   );

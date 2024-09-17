@@ -48,6 +48,7 @@ export default function Home() {
         className="pt-[82px] home-bg bg-black bg-cover bg-top relative z-[1]"
         style={{ paddingTop: "82px" }}
       >
+        {/*First section*/}
         <section className="w-full inline-block text-center pt-[40px] pb-[30px] md:pt-[110px] md:pb-[65px]">
           <div className="container">
             <h5 className="font-HelveticaNeue text-[#757575] text-[16px] md:text-[20px] ">
@@ -66,6 +67,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/*Video section*/}  
         <section className="w-full inline-block">
           <div className="container">
             <div className="relative cursor-pointer text-center" onClick={openModal}>
@@ -99,9 +101,11 @@ export default function Home() {
               </div>
             </div>
           </div>
+           {/*video popup*/}  
           <VideoModal isOpen={isModalOpen} onClose={closeModal} />
         </section>
-
+        
+         {/*6 gird section*/}  
         <section className="w-full inline-block pt-[60px] pb-[90px] md:pt-[90px] md:pb-[180px]">
           <div className="container !max-w-[1140px]">
             <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 lg:grid-cols-3">
@@ -138,7 +142,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        
+         {/*image with text section*/}  
         <section className="w-full inline-block text-center">
           <div className="container !max-w-[1140px]">
             <div className="max-w-[1010px]">
@@ -179,17 +184,22 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <section className="w-full inline-block text-center pb-[40px] pt-[64px] md:pt-[170px] md:pb-[60px]">    
           <div className="container">
             <h6 className="uppercase text-[16px] tracktext-center font-HelveticaNeue text-white text-base tracking-widest mb-[30px] md:mb-[45px]">
               Powering 20k+ businesses globally
             </h6> 
           </div>
+          {/*Cleint logos*/}  
           <LogoSlider />
         </section>
+         
+        {/*Epoch fin text Scroll*/}   
         <section className="w-full inline-block text-center pb-[100px] md:pb-[100px] lg:pb-0">   
            <TextScroll />
-        </section>
+        </section> 
+
       </main>
     </>
   );

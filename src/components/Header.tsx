@@ -26,7 +26,7 @@ const Header: React.FC = () => {
   }, [isMenuOpen]);
 
   const renderLogo = () => {
-    if (pathname === "/" || pathname === "/get-started" || pathname === "/community") { 
+    if (pathname === "/" || pathname === "/get-started") { 
       return <LogoWhite />;
     } else {
       return <LogoBlack />;
@@ -37,6 +37,7 @@ const Header: React.FC = () => {
     <header className="flex items-center justify-between py-[14px] fixed z-10 top-0 w-full"> 
       <div className="container">
         <div className="header-bg relative z-[9] flex items-center justify-between border-[1px] py-[10px] px-[18px] border-[#191919] rounded-[6px] lg:py-[5px] lg:px-[8px]">
+         
           {/* Logo */} 
           <div className="flex items-center lg:min-w-[220px]">
             <Link href="/" className="text-xl font-bold">
@@ -69,7 +70,7 @@ const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/* Hamburger Menu */}
+          {/* Hamburger Menu */} 
           <div className="lg:hidden flex items-center">
           <button onClick={toggleMenu} className="menuicon focus:outline-none">
              {isMenuOpen ? <HumburgerCloseIcon /> : <HumburgerIcon />} 
@@ -115,6 +116,7 @@ const Header: React.FC = () => {
               </div>
             </div>
           )}
+
     </header>
   );
 };

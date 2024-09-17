@@ -172,30 +172,55 @@ padding: 0;
   backdrop-filter: blur(12.5px); 
   -webkit-backdrop-filter:  blur(12.5px);
 }
-#black-background  .footer-middle a {
+.community-footer-bg ~ footer.footer-main .footer-top {
+  background-image: url(../assets/images/box-bg.jpg); 
+  background-position: center;
+}
+.community-footer-bg ~ footer.footer-main .footer-top a.button-black {
+  --tw-backdrop-blur: blur(7px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  background-color: rgba(255, 255, 255, 0.10);
+  border: 2px solid #19B0B1;
+}
+.community-footer-bg ~ footer.footer-main .footer-top a.button-black::before {
+ display: none;
+}
+#black-background  .footer-middle a, 
+.community-footer-bg ~ footer.footer-main a {
   color: #757575;
 }
-#black-background  .news-form p { 
+#black-background  .news-form p, 
+.community-footer-bg ~ footer.footer-main .news-form p {  
   opacity: 0.45;
 } 
-#black-background  .custom-p-0 g circle {
+#black-background  .custom-p-0 g circle,
+.community-footer-bg ~ footer.footer-main  .custom-p-0 g circle {
   fill: transparent;
   stroke: rgb(255 255 255 / 15%);
 }
-#black-background  .custom-p-0 path {
+#black-background  .custom-p-0 path,
+.community-footer-bg ~ footer.footer-main  .custom-p-0 path {
   fill: #fff;
 }
-#black-background .input-border, #black-background .input-border  .MuiOutlinedInput-notchedOutline {
+#black-background .input-border, 
+#black-background .input-border  .MuiOutlinedInput-notchedOutline,
+.community-footer-bg ~ footer.footer-main .input-border, 
+.community-footer-bg ~ footer.footer-main .input-border  .MuiOutlinedInput-notchedOutline {
   border-color: rgb(255 255 255 / 25%) !important;
   color: #fff;
 }
-#black-background .submitbutton path { 
+#black-background .submitbutton path, 
+.community-footer-bg ~ footer.footer-main .submitbutton path { 
   fill: #fff;
 }
-#black-background  .footer-bottom {
+#black-background  .footer-bottom,
+.community-footer-bg ~ footer.footer-main  .footer-bottom {
   border-top-color: rgb(255 255 255 / 15%) !important;
 }
-#black-background .footer-bottom p, #black-background .footer-bottom li a {
+#black-background .footer-bottom p, #black-background .footer-bottom li a, 
+.community-footer-bg ~ footer.footer-main .footer-bottom p, 
+.community-footer-bg ~ footer.footer-main .footer-bottom li a {
   color: rgb(255 255 255);
 }
 .menu-open {
@@ -218,7 +243,7 @@ padding: 0;
 	border-radius: 0px;
 	background-color: transparent;
 }
-h1{
+h1, .h1{
   font-size: 68px;
 font-style: normal;
 font-weight: 500;
@@ -315,6 +340,11 @@ z-index: 1;
   backdrop-filter: blur(7.5px);
   -webkit-backdrop-filter: blur(7.5px);  
   }
+  .tag-blog { 
+    position: absolute;
+    top: 0;
+    left: 22px;
+}
 @media (prefers-reduced-motion: reduce) {
   .marquee__group {
     animation-play-state: paused;
@@ -369,7 +399,7 @@ body#white-background a.get-started {
 .tab-content-custom .blog-card-custom:nth-child(4)  p,
 .tab-content-custom .blog-card-custom:nth-child(5)  p, 
 .tab-content-custom .blog-card-custom:first-child  p{
- display: block !important;
+ display: -webkit-box !important;
 }
 .tab-content-custom .blog-card-custom p{
   display: none;
@@ -494,7 +524,7 @@ line-height: 18px;
   background-image: url(../assets/images/signupBG.png);
   background-repeat: no-repeat;
   background-position: top;
-  background-size: contain;
+  background-size: cover; 
 }
 /********footer-color******/
 #black-background  .footer-bg ~ footer.footer-main .footer-top {
@@ -605,6 +635,10 @@ line-height: 18px;
 }
 .plan-slider-container ul li:first-child {
   border-top: none;
+}
+.community-footer-bg ~ footer.footer-main {
+  background: #000;
+  color: #fff;
 }
 /**********/
 @keyframes scroll-x {
@@ -733,7 +767,7 @@ nav a {
     font-size: 32px;
     line-height: 40px;
 }
-h1 {
+h1, .h1 {
   font-size: 50px;
   line-height: 50px;
 }
@@ -760,7 +794,7 @@ h1 {
   height: 36px;
   right: 20px;
 }
-  h1 {
+  h1, .h1 {
     font-size: 36px;
     line-height: 36px;
     letter-spacing: -.36px
