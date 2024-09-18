@@ -1,4 +1,5 @@
 // src/app/layout.tsx
+import "../lib/amplifyConfig";
 import { ReactNode } from "react";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -45,11 +46,10 @@ export default function RootLayout({
         id="black-background"
         className={`${HelveticaNeueThin.variable} ${HelveticaNeue.variable} ${HelveticaNeueMedium.variable} ${PublicSansBlack.variable}`}
       >
-        {/* Client-side layout to handle dynamic functionality */} 
+        {/* Client-side layout to handle dynamic functionality */}
         <ClientRootLayout>
           {children}
         </ClientRootLayout>
-        
       </body>
     </html>
   );

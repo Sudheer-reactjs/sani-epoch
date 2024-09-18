@@ -345,6 +345,18 @@ z-index: 1;
     top: 0;
     left: 22px;
 }
+.css-4pdmu4-MuiBreadcrumbs-ol a, .css-4pdmu4-MuiBreadcrumbs-ol li p, .css-4pdmu4-MuiBreadcrumbs-ol li  {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  margin: 0;
+  font-family: var(--font-HelveticaNeue);
+}
+.css-4pdmu4-MuiBreadcrumbs-ol li{
+  margin: 0 2px;
+}
+.singl-bolg-page p:last-child {
+  margin: 0;
+}
 @media (prefers-reduced-motion: reduce) {
   .marquee__group {
     animation-play-state: paused;
@@ -429,12 +441,23 @@ body#white-background button.menuicon svg path {
 body#white-background.menu-open button.menuicon svg path {
   stroke: #000;
 }
-.singl-bolg-page p {
+.singl-bolg-page p, .features-list li {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
   margin-bottom: 30px;
+}
+.features-list ul {
+  list-style: disc;
+  padding-left: 22px;
+}
+.features-list ul li {
+  margin-bottom: 16px;
+}
+.features-list p {
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 .singl-bolg-page h2{
 margin-bottom: 30px;
@@ -836,7 +859,7 @@ body#white-background footer.footer-main a, body#white-background footer.footer-
   font-size: 20px;
   line-height: 28px;
 }
-.singl-bolg-page p, .singl-bolg-page .blogtext-16 p {
+.singl-bolg-page p, .singl-bolg-page .blogtext-16 p, .features-list li {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 20px;

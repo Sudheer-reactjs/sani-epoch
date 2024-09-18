@@ -1,5 +1,11 @@
 "use client";
-import { CommentIcon, LikeIcon, SelectDownIcon, SelectUpIcon, TagIcon } from "@/utlis/svg";
+import {
+  CommentIcon,
+  LikeIcon,
+  SelectDownIcon,
+  SelectUpIcon,
+  TagIcon,
+} from "@/utlis/svg";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,7 +15,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { blogData } from "@/utlis/blogData";
 
 interface TradeIdeasCardProps {
-  blogData: typeof blogData; 
+  blogData: typeof blogData;
 }
 
 const categories = [
@@ -95,7 +101,7 @@ const TradeIdeasCard: React.FC<TradeIdeasCardProps> = ({ blogData }) => {
     })`,
     content: filteredBlogs(category).map((blog) => (
       <Link
-        href={`/community/posts/${blog.id}`} 
+        href={`/community/posts/${blog.id}`}
         key={blog.id}
         className="blog-card-custom slider-card-custom bg-custom-gray rounded-[32px] p-[10px] cursor-pointer"
       >
@@ -108,7 +114,7 @@ const TradeIdeasCard: React.FC<TradeIdeasCardProps> = ({ blogData }) => {
             height={1000}
           />
           <div className="tag-blog">
-          <TagIcon />
+            <TagIcon />
           </div>
         </div>
         <div className="blog-list py-[20px] px-[20px]">
@@ -118,16 +124,24 @@ const TradeIdeasCard: React.FC<TradeIdeasCardProps> = ({ blogData }) => {
           <p className="text-[14px] leading-[22px] text-custom-black text-left mt-[10px] md:mt-[15px] line-clamp-4">
             {blog.description}
           </p>
-          <div className="flex justify-between items-center mt-[15px]">     
+          <div className="flex justify-between items-center mt-[15px]">
             <div>
-              <p className="text-[14px] leading-[22px] text-custom-black text-left">by {blog.author}</p>
+              <p className="text-[14px] leading-[22px] text-custom-black text-left">
+                by {blog.author}
+              </p>
               <span className="text-custom-black  text-[14px] block md:text-[16px] text-left">
                 {blog.date}
               </span>
             </div>
             <div className="post-meta flex justify-between items-center  gap-[10px]">
-            <span className="bg-[#F7F7F7] rounded-[4px] py-[6px] px-[6px] gap-[4px] flex justify-between items-center text-[12px] leading-[22px] text-custom-black text-left"><CommentIcon />{blog.comments !== undefined ? blog.comments : 0}</span>
-            <span className="bg-[#F7F7F7] rounded-[4px] py-[6px] px-[6px] gap-[4px] flex justify-between items-center text-[12px] leading-[22px] text-custom-black text-left"><LikeIcon />{blog.likes !== undefined ? blog.likes : 0}</span>
+              <span className="bg-[#F7F7F7] rounded-[4px] py-[6px] px-[6px] gap-[4px] flex justify-between items-center text-[12px] leading-[22px] text-custom-black text-left">
+                <CommentIcon />
+                {blog.comments !== undefined ? blog.comments : 0}
+              </span>
+              <span className="bg-[#F7F7F7] rounded-[4px] py-[6px] px-[6px] gap-[4px] flex justify-between items-center text-[12px] leading-[22px] text-custom-black text-left">
+                <LikeIcon />
+                {blog.likes !== undefined ? blog.likes : 0}
+              </span>
             </div>
           </div>
         </div>

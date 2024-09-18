@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, Button  } from "react";
 import Link from "next/link";
 
 import {
@@ -10,7 +10,8 @@ import {
 } from "@/utlis/svg";
 import ProAccountCard from "@/components/ProAccountCard";
 import TextScroll from "@/components/TextScroll";
-
+import { Authenticator } from "@aws-amplify/ui-react";
+import '@aws-amplify/ui-react/styles.css';
 const Page: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formValues, setFormValues] = useState({
@@ -41,6 +42,19 @@ const Page: React.FC = () => {
     <main
       className="pt-[70px] black-background bg-black bg-cover bg-top relative z-[1] md:pt-[110px]"
     >
+
+<Authenticator
+      socialProviders={['google', 'facebook']}
+      loginMechanisms={['email']}
+    >
+      {({ signOut, user }) => (
+        <div>
+          <h1>Hello {user?.username}</h1>
+          <Button onClick={signOut}>Sign out</Button>
+        </div>
+      )}
+    </Authenticator>
+
       <div className="w-full max-w-[702px] mx-auto">
         <div className="text-center">
           <div className="flex justify-center brain-icon ">

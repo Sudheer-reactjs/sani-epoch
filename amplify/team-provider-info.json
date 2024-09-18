@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-saniepoch-dev-993cf-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637423486652:role/amplify-saniepoch-dev-993cf-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637423486652:role/amplify-saniepoch-dev-993cf-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-saniepoch-dev-993cf-deployment",
+      "UnauthRoleName": "amplify-saniepoch-dev-993cf-unauthRole",
+      "StackName": "amplify-saniepoch-dev-993cf",
+      "StackId": "arn:aws:cloudformation:us-east-2:637423486652:stack/amplify-saniepoch-dev-993cf/797fffa0-75a5-11ef-b0d8-02849292dc31",
+      "AmplifyAppId": "d2vhnbi81w7gno"
+    },
+    "categories": {
+      "auth": {
+        "saniepoch70a0642a": {}
+      }
+    }
+  }
+}
